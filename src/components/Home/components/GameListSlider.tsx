@@ -113,5 +113,6 @@ export function GameListSlider({ gameList }: { gameList: any[] }) {
         </>
       )}
     </Swiper>
+
   );
 }

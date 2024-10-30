@@ -42,7 +42,7 @@
     "react-select": "^5.7.4",
     "react-spinners": "^0.13.8",
     "react-toastify": "9.1.2",
-    "swiper": "^10.0.4"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

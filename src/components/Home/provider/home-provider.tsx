@@ -1,3 +1,4 @@
+"use client";
 import bbsApi from "@/app/apis/bbsApi";
 import exchangeApi from "@/app/apis/exchangeApi";
 import { GameRuleDialog } from "@/components/shared/common/components/GameRuleDialog";

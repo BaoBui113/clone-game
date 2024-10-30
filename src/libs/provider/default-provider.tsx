@@ -44,7 +44,7 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
   const { token, host } = getTokenHost();
   const toast = useToast();
   const router = useRouter();
-  const { user, deviceInfo,isCheckTokenExpire } = useAuth();
+  const { user, deviceInfo, isCheckTokenExpire } = useAuth();
   const [isOpenAdsDialog, setIsOpenAdsDialog] = useState(false);
   const [msg, setMsg] = useState(null);
   const pathName = usePathname();
@@ -71,7 +71,7 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
 
           if (res.data?.status == 0) {
             setMsg(res.data);
-          }else{
+          } else {
             isCheckTokenExpire?.(res?.status)
           }
         } catch (err) {
@@ -84,7 +84,7 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (isOpen === "true") {
       setIsOpenWalletDialog(tag);
-    }else{
+    } else {
       setIsOpenWalletDialog(null)
     }
   }, [tag, isOpen]);
@@ -112,10 +112,10 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
           return false;
         }
       } catch (error) {
-        const {response }:any = error
+        const { response }: any = error
         isCheckTokenExpire?.(response?.data?.status)
-        console.log("error game check",error)
-        
+        console.log("error game check", error)
+
       }
     }
   };

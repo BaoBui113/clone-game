@@ -9,7 +9,7 @@ import { useHomeContext } from "@/components/Home/provider/home-provider";
 import { BannerItemSkeleton } from "./BannerItemSkeleton";
 
 type Props = {};
-export function BannerHeader({}: Props) {
+export function BannerHeader({ }: Props) {
   const [bannerSlide, setBannerSlide] = useState<any[]>(BANNER);
   const isMd = useScreen("md");
   const [typeScreen, setTypeScreen] = useState("desktop");
@@ -18,7 +18,7 @@ export function BannerHeader({}: Props) {
   useEffect(() => {
     setTypeScreen(!isMd ? "mobile" : "desktop");
   }, [isMd]);
-  
+
   return (
     <>
       <Swiper
@@ -80,6 +80,10 @@ const BANNER: BannerHeaderType[] = [
   {
     type: "desktop",
     imgs: [
+      {
+        image: "/images/banner/bnr.png",
+        url: "#",
+      },
       {
         image: "/images/banner/bnr-1.jpg",
         url: "#",

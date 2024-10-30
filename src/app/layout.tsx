@@ -1,13 +1,13 @@
-"use client";
+
 import { DefaultProvider } from "@/libs/provider/default-provider";
 import "./../styles/index.css";
-
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/libs/provider/auth-provider";
 import { ToastProvider } from "@/libs/provider/toast-provider";
 import Head from "./head";
-
+import ContainerLayout from "@/components/Home/components/ContainerLayout";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 export default function RootLayout({
   children,
 }: {
@@ -22,15 +22,13 @@ export default function RootLayout({
 
       <Head />
 
-      <body className="bg-primary">
+      <body>
         <ToastProvider>
           <AuthProvider>
             <DefaultProvider>
-              <Header />
-
-              {children}
-
-              <Footer />
+              <ContainerLayout>
+                {children}
+              </ContainerLayout>
             </DefaultProvider>
           </AuthProvider>
         </ToastProvider>

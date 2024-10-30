@@ -141,11 +141,10 @@ export function Sidebar({ ...props }: Props & SildeOutProps) {
               {!!item.subMenus?.length && (
                 <>
                   <ul
-                    className={`${
-                      activeSubMenu === idx
+                    className={`${activeSubMenu === idx
                         ? "visible h-full transition-all"
                         : "hidden h-0 transition-all"
-                    } z-100 w-full border-l bg-white`}
+                      } z-100 w-full border-l bg-white`}
                   >
                     {item.subMenus.map((item, index) => (
                       <li
