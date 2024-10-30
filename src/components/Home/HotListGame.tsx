@@ -1,3 +1,4 @@
+"use client";
 import { useScreen } from "@/libs/hooks/useScreen";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";

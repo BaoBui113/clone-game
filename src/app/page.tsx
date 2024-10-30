@@ -1,4 +1,3 @@
-
 import { BannerHeader } from "@/components/Header/components/BannerHeader";
 import { BoardSystems } from "@/components/Home/BoardSystems";
 import { HotListGame } from "@/components/Home/HotListGame";
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <HomeProvider>
       <main className="w-full">
-
         <WelcomeLogin />
         {/* 
           <MainMenu />
@@ -24,8 +22,8 @@ export default function Home() {
           </div>
           <RankList /> */}
         {/* <BannerHeader /> */}
+        {/* <HotListGame /> */}
         <ContentPage />
-
       </main>
     </HomeProvider>
   );
