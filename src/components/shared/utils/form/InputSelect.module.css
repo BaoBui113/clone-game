@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.container input {
+    height: 40px;
+    background-color: white;
+    padding: 6px 12px;
+    outline: none;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #CFCFCF;
+    background: #FFF;
+    font-size: 14px;
+
+}
+.optionWrap {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-flow: row wrap;
+    overflow-x: auto;
+}
+
+.item {
+    border-radius: 12px;
+    background-color: #3C3C3C;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+    .container input {
+        width: 100%;
+    }
+}

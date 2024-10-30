@@ -1,0 +1,14 @@
+.container {
+    
+}
+
+.container textarea {
+    background-color: white;
+    color: black;
+    padding: 6px 12px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #898989;
+    font-size: 14px;
+    width: 100%;
+}

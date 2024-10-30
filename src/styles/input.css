@@ -1,0 +1,14 @@
+input::placeholder {
+  color: #5f5e5e; /* Set the color of the placeholder text */
+  font-size: 12px; /* Optionally, you can set the font size for the placeholder text */
+  /* Add any other styles you want for the placeholder text */
+}
+
+input {
+  font-size: 12px;
+  background: #ffffff;
+}
+
+input:focus {
+  background-color: #ffffff;
+}

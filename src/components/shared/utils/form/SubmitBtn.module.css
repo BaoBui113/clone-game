@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #FFD035;
+    color: black;
+    cursor: pointer;
+}
+

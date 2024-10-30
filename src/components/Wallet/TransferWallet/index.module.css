@@ -1,0 +1,65 @@
+.container {
+    margin-top: 20px;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    padding: 30px;
+    row-gap: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+.labelWrap {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    
+    color: #FFDD6D;
+}
+
+.inputWrap {
+    width: 80%;
+}
+
+.inputWrap .phone {
+    color: #EAE9E9;
+    font-size: 14px;
+}
+
+.inputWrap p {
+    color: #898989;
+    font-size: 12px;
+    
+}
+
+.inputWrap p {
+    margin-top: 5px;
+}
+
+.submitWrap {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .row {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .inputWrap {
+        width: 100%;
+    }
+    .labelWrap {
+        width: 100%;
+    }
+}
