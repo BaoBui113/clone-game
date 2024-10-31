@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ThemHomPage from "@/components/Home/components/ThemHomepage";
+import { NextUIProvider } from "@nextui-org/system";
 export default function RootLayout({
   children,
 }: {
@@ -26,11 +27,13 @@ export default function RootLayout({
       <body>
         <ToastProvider>
           <AuthProvider>
-            <ThemHomPage>
-              <ContainerLayout>
+            {/* <ThemHomPage> */}
+            <ContainerLayout>
+              <NextUIProvider>
                 {children}
-              </ContainerLayout>
-            </ThemHomPage>
+              </NextUIProvider>
+            </ContainerLayout>
+            {/* </ThemHomPage> */}
           </AuthProvider>
         </ToastProvider>
       </body>

@@ -10,7 +10,7 @@ import { HomeProvider } from "@/components/Home/provider/home-provider";
 
 export default function Home() {
   return (
-    <HomeProvider>
+    <>
       <main className="w-full">
         <WelcomeLogin />
         {/* 
@@ -25,6 +25,6 @@ export default function Home() {
         {/* <HotListGame /> */}
         <ContentPage />
       </main>
-    </HomeProvider>
+    </>
   );
 }

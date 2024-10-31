@@ -23,7 +23,7 @@ export default function RankItems({
         {listRanks.map((rank, index) => {
           return (
             <Input
-              className={
+              classNameInput={
                 index % 2 === 0
                   ? "bg-[#3B3B3B] focus:bg-[#3B3B3B]"
                   : "bg-[#313131] focus:bg-[#313131]"
