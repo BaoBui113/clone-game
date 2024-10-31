@@ -17,7 +17,7 @@ const BannerHomePage = () => {
     const nextRef = useRef(null);
     return (
         <>
-            <div className='relative max-w-[704px] mx-auto'>
+            <div className='relative w-full xl:max-w-[704px] mx-auto'>
                 <Swiper
                     navigation={{
                         prevEl: prevRef.current,
@@ -56,10 +56,10 @@ const BannerHomePage = () => {
                         })
                     }
                 </Swiper>
-                <button ref={prevRef} className="absolute flex items-center justify-center p-2 text-xl font-semibold text-black transform -translate-y-1/2 bg-white rounded-full -left-16 w-9 h-9 top-1/2">
+                <button ref={prevRef} className="absolute z-30 flex items-center justify-center p-2 text-xl font-semibold text-white transform -translate-y-1/2 bg-black rounded-full xl:text-black xl:bg-white left-8 xl:-left-16 w-9 h-9 top-1/2">
                     {`<`}
                 </button>
-                <button ref={nextRef} className="absolute flex items-center justify-center p-2 text-xl font-semibold text-black transform -translate-y-1/2 bg-white rounded-full -right-16 w-9 h-9 top-1/2">
+                <button ref={nextRef} className="absolute z-30 flex items-center justify-center p-2 text-xl font-semibold text-white transform -translate-y-1/2 bg-black rounded-full xl:text-black xl:bg-white right-8 xl:-right-16 w-9 h-9 top-1/2">
                     {`>`}
                 </button>
             </div>

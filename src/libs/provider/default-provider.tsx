@@ -217,7 +217,7 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
       >
         {children}
 
-        <NotifyAdsDialog
+        {/* <NotifyAdsDialog
           isOpen={isOpenAdsDialog}
           onClose={() => setIsOpenAdsDialog(false)}
           img={["/images/popup/ads-1.jpg", "/images/popup/ads-2.jpg"]}
@@ -237,7 +237,7 @@ export function DefaultProvider({ children }: { children: React.ReactNode }) {
         <AgreeRuleGameDialog
           isOpen={agreeRuleGame.isOpen}
           onClose={() => setAgreeRuleGame({ isOpen: false, status: false })}
-        />
+        /> */}
       </DefaultContext.Provider>
     </ThemeProvider>
   );

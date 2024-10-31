@@ -41,26 +41,26 @@ const itemInfors = [
 ];
 const ContentPage = () => {
   return (
-    <div className="w-full bg-[#1B1B1B] p-[10px]">
+    <div className="w-full bg-[#1B1B1B] p-5 md:p-[10px]">
       <div className="mb-8">
         <BannerHomePage />
       </div>
-      <div className="mb-16 grid grid-cols-12 gap-5">
-        <div className="col-span-4 w-full">
+      <div className="grid grid-cols-12 gap-5 mb-16">
+        <div className="w-full col-span-12 md:col-span-4">
           <RankItems
             listRanks={badge}
             title="공지사항"
             icon="/images/icon/bell-badge.svg"
           />
         </div>
-        <div className="col-span-4 w-full">
+        <div className="w-full col-span-12 md:col-span-4">
           <RankItems
             listRanks={badge}
             title="공지사항"
             icon="/images/icon/rank.svg"
           />
         </div>
-        <div className="col-span-4 w-full">
+        <div className="w-full col-span-12 md:col-span-4">
           <RankItems
             listRanks={badge}
             title="공지사항"
@@ -71,7 +71,7 @@ const ContentPage = () => {
       <div className="mb-10 grid grid-cols-12 gap-[10px]">
         {itemInfors.map((item, index) => {
           return (
-            <div key={index} className="col-span-4 w-full">
+            <div key={index} className="w-full col-span-12 md:col-span-6 xl:col-span-4">
               <BoxInforItems des={item.des} title={item.title} />
             </div>
           );

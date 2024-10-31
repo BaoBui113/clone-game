@@ -13,13 +13,13 @@ export default function RankItems({
 }) {
   return (
     <div className="flex flex-col">
-      <div className="mb-5 flex items-center gap-[10px]">
-        <div className="relative h-6 w-6">
+      <div className="mb-0 md:mb-5 flex items-center gap-[10px] bg-black md:bg-transparent p-3 md:p-0">
+        <div className="relative w-6 h-6">
           <Image src={icon} alt="icon" fill />
         </div>
         <span className="text-sm font-medium text-white">{title}</span>
       </div>
-      <div className="mb-5 flex flex-col">
+      <div className="flex flex-col mb-5">
         {listRanks.map((rank, index) => {
           return (
             <Input
@@ -35,8 +35,8 @@ export default function RankItems({
           );
         })}
       </div>
-      <div className="flex cursor-pointer items-center justify-end">
-        <span className="text-[10px] font-normal text-[#F7F7F7]">
+      <div className="flex items-center justify-end gap-2 cursor-pointer md:gap-0">
+        <span className="text-xs leading-4 md:text-[10px] font-normal text-[#F7F7F7]">
           view more
         </span>
         <div className="relative h-[14px] w-[11px]">

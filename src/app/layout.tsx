@@ -8,6 +8,7 @@ import ContainerLayout from "@/components/Home/components/ContainerLayout";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import ThemHomPage from "@/components/Home/components/ThemHomepage";
 export default function RootLayout({
   children,
 }: {
@@ -25,11 +26,11 @@ export default function RootLayout({
       <body>
         <ToastProvider>
           <AuthProvider>
-            <DefaultProvider>
+            <ThemHomPage>
               <ContainerLayout>
                 {children}
               </ContainerLayout>
-            </DefaultProvider>
+            </ThemHomPage>
           </AuthProvider>
         </ToastProvider>
       </body>

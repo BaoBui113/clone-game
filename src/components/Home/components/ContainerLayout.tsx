@@ -1,18 +1,20 @@
 import React from "react";
 import SideBars from "./SideBar";
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const ContainerLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex min-h-screen overflow-hidden">
-      <div className="w-1/4">
+    <div className="block min-h-screen md:flex">
+      {/* Sticky Sidebar */}
+      <div className="sticky top-0 hidden h-screen md:block md:w-1/4">
         <SideBars />
       </div>
-      <div className="w-3/4">
+
+      {/* Main Content */}
+      <div className="w-full md:w-3/4">
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </div>
     </div>
@@ -20,3 +22,4 @@ const ContainerLayout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default ContainerLayout;
+
