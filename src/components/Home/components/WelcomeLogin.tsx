@@ -4,9 +4,12 @@ import React from 'react';
 import ModalCommon from './CommonModal';
 
 import FormLogin from './FormLogin';
+import FormRegister from './FormRegister';
 
 const WelcomeLogin = () => {
     const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+    const { isOpen : isOpenRegisterForm, onOpen : onOpenRegisterForm, onOpenChange : onOpenChangeRegisterForm, onClose : onCloseRegisterForm } = useDisclosure();
+
     return (
         <>
             <div className='w-full flex flex-col items-center justify-center gap-4 py-4 md:px-[10px] px-5 bg-white md:py-11'>
@@ -20,8 +23,11 @@ const WelcomeLogin = () => {
                 </p>
                 <button onClick={onOpen} className='rounded-lg bg-black border border-solid border-[#fff] w-fit px-9 py-2 hover:bg-blue-600 duration-300 text-white'>Login</button>
             </div>
-            <ModalCommon isOpen={isOpen} onOpenChange={onOpenChange}>
-                <FormLogin onClose={onClose} />
+            <ModalCommon isOpen={isOpen} onOpenChange={onOpenChange} >
+                <FormLogin onClose={onClose} onOpenRegisterForm={onOpenRegisterForm} isOpenRegisterForm={isOpenRegisterForm} onOpenChangeRegisterForm={onOpenChangeRegisterForm} onCloseRegisterForm={onCloseRegisterForm}  />
+            </ModalCommon>
+             <ModalCommon isOpen={isOpenRegisterForm} onOpenChange={onOpenChangeRegisterForm}>
+                <FormRegister onClose={onCloseRegisterForm} />
             </ModalCommon>
         </>
     );

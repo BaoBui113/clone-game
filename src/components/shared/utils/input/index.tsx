@@ -12,8 +12,9 @@ export default function Input({
   endContext,
   type = "text",
   errorMessage,
+  underline = true,
 }: {
-  type?: string;
+  type?: 'text' | 'password' | 'number';
   title?: string;
   value?: string;
   placeholder?: string;
@@ -23,28 +24,24 @@ export default function Input({
   endContext?: React.ReactNode;
   errorMessage?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  underline?: boolean;
 }) {
-  console.log("type", type);
 
   return (
     <div className={`flex flex-col space-y-1 ${className}`}>
       {title && (
-        <label htmlFor="input" className="text-sm text-white">
+        <label htmlFor="input" className="text-sm text-white mb-[10px]">
           {title}
         </label>
       )}
       <div className="relative">
         <input
           disabled={disabled}
-
           onChange={onChange}
           id="input"
-          {...(type === "password" && { type: "password" })}
-
           type={type}
-          // type={type === "password" ? "password" : "text"}
           placeholder={placeholder}
-          className={`border-b w-full border-gray-500 bg-[#313131] px-3 py-2 text-base text-white transition duration-200 focus:border-gray-300 focus:bg-[#313131] focus:outline-none ${classNameInput}`}
+          className={`px-3 py-2 text-base w-full ${underline ? 'border-b  border-gray-500 bg-[#313131] text-white transition duration-200 focus:border-gray-300 focus:bg-[#313131] focus:outline-none' : 'bg-white text-black border-none focus:bg-white focus:text-black focus:outline-none' } ${classNameInput} `}
         />
         {endContext && (
           <div className="absolute right-3 top-1/2 transform -translate-y-1/2">

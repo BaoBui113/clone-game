@@ -16,9 +16,9 @@ const schema = yup.object().shape({
     password: yup.string().required("Password is required"),
 });
 export type FormLoginType = yup.InferType<typeof schema>;
-export default function FormLogin({ onClose }: { onClose: () => void }) {
+export default function FormLogin({ onClose,onOpenRegisterForm,isOpenRegisterForm,onOpenChangeRegisterForm,onCloseRegisterForm }: { onClose: () => void ,onOpenRegisterForm: () => void,isOpenRegisterForm: boolean,onOpenChangeRegisterForm: () => void,onCloseRegisterForm: () => void }) {
 
-    const { isOpen: isOpenRegister, onOpen: onOpenRegister, onOpenChange: onOpenChangeRegister, onClose: onCloseRegister } = useDisclosure();
+   
     const [isVisible, setIsVisible] = React.useState(false);
 
     const toggleVisibility = () => setIsVisible(!isVisible);
@@ -29,7 +29,7 @@ export default function FormLogin({ onClose }: { onClose: () => void }) {
 
     const handleShowRegister = () => {
         onClose(); // Close the login form
-        onOpenChangeRegister();
+        onOpenRegisterForm();
     }
 
     const onSubmit = (data: FormLoginType) => {
@@ -106,9 +106,7 @@ export default function FormLogin({ onClose }: { onClose: () => void }) {
                     </div>
                 </ModalBody>
             </div>
-            <ModalCommon isOpen={isOpenRegister} onOpenChange={onOpenRegister}>
-                <FormRegister onClose={onCloseRegister} />
-            </ModalCommon>
+           
 
         </>
     )
