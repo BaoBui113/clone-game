@@ -16,7 +16,8 @@ const schema = yup.object().shape({
     password: yup.string().required("Password is required"),
 });
 export type FormLoginType = yup.InferType<typeof schema>;
-export default function FormLogin({ onClose,onOpenRegisterForm,isOpenRegisterForm,onOpenChangeRegisterForm,onCloseRegisterForm }: { onClose: () => void ,onOpenRegisterForm: () => void,isOpenRegisterForm: boolean,onOpenChangeRegisterForm: () => void,onCloseRegisterForm: () => void }) {
+export default function FormLogin({ onClose,onOpenRegisterForm }: 
+    { onClose: () => void ,onOpenRegisterForm: () => void}) {
 
    
     const [isVisible, setIsVisible] = React.useState(false);
@@ -28,7 +29,7 @@ export default function FormLogin({ onClose,onOpenRegisterForm,isOpenRegisterFor
     });
 
     const handleShowRegister = () => {
-        onClose(); // Close the login form
+        onClose(); 
         onOpenRegisterForm();
     }
 

@@ -24,7 +24,7 @@ const WelcomeLogin = () => {
                 <button onClick={onOpen} className='rounded-lg bg-black border border-solid border-[#fff] w-fit px-9 py-2 hover:bg-blue-600 duration-300 text-white'>Login</button>
             </div>
             <ModalCommon isOpen={isOpen} onOpenChange={onOpenChange} >
-                <FormLogin onClose={onClose} onOpenRegisterForm={onOpenRegisterForm} isOpenRegisterForm={isOpenRegisterForm} onOpenChangeRegisterForm={onOpenChangeRegisterForm} onCloseRegisterForm={onCloseRegisterForm}  />
+                <FormLogin onClose={onClose} onOpenRegisterForm={onOpenRegisterForm} />
             </ModalCommon>
              <ModalCommon isOpen={isOpenRegisterForm} onOpenChange={onOpenChangeRegisterForm}>
                 <FormRegister onClose={onCloseRegisterForm} />
