@@ -9,17 +9,16 @@ import * as yup from 'yup';
 import Input from '@/components/shared/utils/input';
 import { EyeSlashFilledIcon } from './EyeSlashFilledIcon';
 import { EyeFilledIcon } from './EyeFilledIcon';
-import ModalCommon from './CommonModal';
-import FormRegister from './FormRegister';
-const schema = yup.object().shape({
+import { login } from '@/app/apis/login';
+; const schema = yup.object().shape({
     username: yup.string().required("Username is required"),
     password: yup.string().required("Password is required"),
 });
 export type FormLoginType = yup.InferType<typeof schema>;
-export default function FormLogin({ onClose,onOpenRegisterForm }: 
-    { onClose: () => void ,onOpenRegisterForm: () => void}) {
+export default function FormLogin({ onClose, onOpenRegisterForm }:
+    { onClose: () => void, onOpenRegisterForm: () => void }) {
 
-   
+
     const [isVisible, setIsVisible] = React.useState(false);
 
     const toggleVisibility = () => setIsVisible(!isVisible);
@@ -29,12 +28,14 @@ export default function FormLogin({ onClose,onOpenRegisterForm }:
     });
 
     const handleShowRegister = () => {
-        onClose(); 
+        onClose();
         onOpenRegisterForm();
     }
 
-    const onSubmit = (data: FormLoginType) => {
-        console.log("Login Data:", data);
+    const onSubmit = async (data: FormLoginType) => {
+        const res = await login(data);
+
+        console.log("res Data:", res);
         // Add your login logic here
 
     };
@@ -107,7 +108,7 @@ export default function FormLogin({ onClose,onOpenRegisterForm }:
                     </div>
                 </ModalBody>
             </div>
-           
+
 
         </>
     )
